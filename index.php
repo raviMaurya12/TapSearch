@@ -5,7 +5,7 @@
 	</head>
 	<body bgcolor="cyan">
 		<center>
-			<form action="index.php" method="post">
+			<form action="" method="post">
 				<input type="text" name="content" style="font-size:10pt;height:500px;width:1000px;"><br><br>
 				<input type="submit">
 			</form>
@@ -13,7 +13,7 @@
 				<?php
 
 					$cont='';
-					if(isset($_POST["content"])){
+					if(!empty($_POST["content"])){
 						$cont=$POST["content"];
 					}
 					echo $cont;
