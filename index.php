@@ -4,19 +4,19 @@
 	<title>myApp</title>
 </head>
 	<body bgcolor="cyan">
-		<h1>
-			<center>
-			<?php
-
-				$last_line=system('./test < input.txt');
-				$output = file_get_contents('output.txt');
-				echo $output;
-
+		<center>
+			<form action="index.php" method="post">
+				<input type="text" name="content" width="600" height="600"><br>
+				<input type="submit">
+			</form>
+			<hr>
+			<?php 
+				$content='empty';
+				if(isset($_POST["content"])){
+					$content=$_POST["content"];
+				}
+				<p>echo $content</p>
 			?>
-				
-			</center>
-		</h1>
-		<hr>
-
+		</center>
 	</body>
 </html>
