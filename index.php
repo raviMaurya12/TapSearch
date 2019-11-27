@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<title>myApp</title>
+</head>
 	<body bgcolor="cyan">
+		<h1>
+			<center>
+			<?php
 
-		<h1><?php echo "Hello World!" ?></h1>
+				$last_line = system('./test', $retval);
+				echo $last_line;
+
+			?>
+				
+			</center>
+		</h1>
 		<hr>
 
 	</body>
