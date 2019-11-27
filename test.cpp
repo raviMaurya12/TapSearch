@@ -40,6 +40,5 @@ int32_t main(){
     myfile.open ("output.txt");
     myfile << c;
     myfile.close();
-    cout<<c;
 	return 0;
 }

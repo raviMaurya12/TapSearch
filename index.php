@@ -8,7 +8,9 @@
 			<center>
 			<?php
 
-				echo system('./test < input.txt');
+				$last_line=system('./test < input.txt');
+				$output = file_get_contents('output.txt');
+				echo $output;
 
 			?>
 				
