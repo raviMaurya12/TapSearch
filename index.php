@@ -4,20 +4,20 @@
 		<title>myApp</title>
 	</head>
 	<body bgcolor="cyan">
-		<form action="index.php" method="post">
-			<input type="text" name="name"><br>
-			<input type="submit">
-		</form>
-		<p>
-			<center>
-			<?php
+		<center>
+			<form action="index.php" method="post">
+				<input type="text" name="content" height="600" width="900"><br>
+				<input type="submit">
+			</form>
+			<p>
+				<?php
 
-				$last_line=system('./test < input.txt');
-				$output = file_get_contents('output.txt');
-				echo $output;
+					$last_line=system('./test < input.txt');
+					$output = file_get_contents('output.txt');
+					echo $output;
 
-			?>
-			</center>
-		<p>
+				?>
+			</p>
+		</center>
 	</body>
 </html>
