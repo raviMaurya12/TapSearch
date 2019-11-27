@@ -3,9 +3,7 @@
 
 		<?php 
 
-			$cont='';
-			$cont=$_POST["content"]; 
-			echo $cont;
+			echo $_POST["content"]; 
 
 		?>
 
