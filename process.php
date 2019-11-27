@@ -1,4 +1,4 @@
 <?php 
-	$cont=$_POST["content"];
+	$cont="hello";
 	echo $cont;
 ?>
