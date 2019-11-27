@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Process</title>
+		<title>myApp</title>
 	</head>
 	<body bgcolor="cyan">
-		<h1>
+		<form action="index.php" method="post">
+			<input type="text" name="name"><br>
+			<input type="submit">
+		</form>
+		<p>
 			<center>
 			<?php
 
@@ -14,8 +18,6 @@
 
 			?>
 			</center>
-		</h1>
-		<hr>
-
+		<p>
 	</body>
 </html>
