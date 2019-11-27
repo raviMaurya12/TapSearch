@@ -37,6 +37,6 @@ int32_t main(){
     myfile.open ("output.txt");
     myfile << "Printing from C++ using php!!";
     myfile.close();
-    cout<<"Hello World!!";
+    cout<<"Hello World!!"<<flush;
 	return 0;
 }
