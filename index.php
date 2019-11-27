@@ -8,8 +8,7 @@
 			<center>
 			<?php
 
-				$last_line = system('./test', $retval);
-				echo $last_line;
+				echo exec('./test');
 
 			?>
 				
