@@ -6,7 +6,7 @@
 	<body bgcolor="cyan">
 		<center>
 			<form action="index.php" method="post">
-				<input type="text" name="content" class="inputbox"><br><br>
+				<input type="text" name="content" style="font-size:18pt;height:420px;width:200px;"><br><br>
 				<input type="submit">
 			</form>
 			<p>
