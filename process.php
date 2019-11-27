@@ -1,4 +1,7 @@
-<?php 
-	$cont="hello";
-	echo $cont;
-?>
+<html>
+	<body>
+
+		Welcome <?php echo $_POST["content"]; ?><br>
+
+	</body>
+</html>
