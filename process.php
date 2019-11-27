@@ -1,7 +1,13 @@
 <html>
 	<body>
 
-		Welcome <?php echo $_POST["content"]; ?><br>
+		<?php 
+
+			$cont='';
+			$cont=$_POST["content"]; 
+			echo $cont;
+
+		?>
 
 	</body>
 </html>
