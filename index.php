@@ -13,7 +13,7 @@
 				<?php
 
 					$cont='';
-					if(!empty($_POST["content"])){
+					if(isset($_POST["content"])){
 						$cont=$POST["content"];
 					}
 					echo $cont;
