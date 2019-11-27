@@ -34,11 +34,21 @@ int isPowerof2(int x) { return (x && !(x & x-1)); }
 
 int32_t main(){
 	ofstream myfile;
-	int a,b;
-	cin>>a>>b;
-	int c=a+b;
+	string s[1000];
+	int i=0;
+	while(cin>>s[i]){
+		rep(j,0,s[i].size()){
+			if(s[i][j]>='A' && s[i][j]<='Z'){
+				s[i][j]=(int)(s[i][j]-'A')+'a';
+			}
+		}
+		i++;
+	}
     myfile.open ("output.txt");
-    myfile << c;
+    int n=i;
+    rep(j,0,n){
+    	myfile<<s[j]<<" ";
+    }
     myfile.close();
 	return 0;
 }
