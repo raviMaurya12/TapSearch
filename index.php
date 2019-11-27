@@ -13,6 +13,9 @@
 				<?php
 
 					$cont='';
+					if(!empty($_POST["content"])){
+						$cont=$POST["content"];
+					}
 					echo $cont;
 					#$last_line=system('./test < input.txt');
 					#$output = file_get_contents('output.txt');
