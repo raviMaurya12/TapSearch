@@ -34,8 +34,12 @@ int isPowerof2(int x) { return (x && !(x & x-1)); }
 
 int32_t main(){
 	ofstream myfile;
+	int a,b;
+	cin>>a>>b;
+	int c=a+b;
     myfile.open ("output.txt");
-    myfile << "Printing from C++ using php!!";
+    myfile << c;
     myfile.close();
+    cout<<c;
 	return 0;
 }

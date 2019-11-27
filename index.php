@@ -8,7 +8,7 @@
 			<center>
 			<?php
 
-				echo system('./test');
+				echo system('./test < input.txt');
 
 			?>
 				
