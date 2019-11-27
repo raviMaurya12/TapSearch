@@ -10,13 +10,13 @@
 				<input type="submit">
 			</form>
 			<hr>
-			<?php 
+			<!--<?php 
 				$content='empty';
 				if(isset($_POST["content"])){
 					$content=$_POST["content"];
 				}
 				<p>echo $content</p>
-			?>
+			?> -->
 		</center>
 	</body>
 </html>
