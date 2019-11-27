@@ -8,7 +8,7 @@
 			<center>
 			<?php
 
-				echo exec('./test');
+				echo system('./test');
 
 			?>
 				
