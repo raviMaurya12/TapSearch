@@ -39,7 +39,7 @@
 					echo $text1;
 					$time_elapsed_secs1 = microtime(true) - $start1;
 					echo "<br>";
-					echo "time taken:";
+					echo "time taken in seconds:";
 					echo $time_elapsed_secs1;
 		    	?>
 		  	</div>
