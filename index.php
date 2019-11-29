@@ -3,7 +3,7 @@
 	<head>
 		<title>myApp</title>
 	</head>
-	<body bgcolor="cyan">
+	<body bgcolor="#e6e6e6">
 		<center>
 			<form action="process.php" method="post">
 				<pre><textarea name="content" style="font-size:8pt;height:450px;width:1000px;"></textarea></pre><br>
