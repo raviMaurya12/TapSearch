@@ -1,9 +1,0 @@
-Search result for lorem : 
-Paragraph 		Count
-2				1 times
-1				2 times
-
-Search result for maecenas : 
-Paragraph 		Count
-2				1 times
-
