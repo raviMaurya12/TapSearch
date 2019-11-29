@@ -10,7 +10,7 @@
 			fwrite($fs,"\n\n");
 			fwrite($fs,$_POST["searchInput"]);
 			fclose($fs);
-			$last_line=system('./hash_implementation < input.txt',$retval);
+			$last_line=system('./trie_implementation < input.txt',$retval);
 			$text=nl2br(file_get_contents('output.txt'));
 			echo $text;
 

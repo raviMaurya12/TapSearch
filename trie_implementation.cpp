@@ -7,10 +7,24 @@
 #define endl '\n'
 using namespace std;
 
+struct Trie{
+	Trie *children[26];
+	int isEnd;
+};
+
+Trie* createNode(){
+	Trie *node =new Trie;
+	node->isEnd=0;
+	for(int i=0;i<26;i++){
+		node->children[i]=NULL;
+	}
+	return node;
+}
+
 class Document{
 	public:
 		vector<vector<string>> paragraphs;							//2D vector to represent the document
-		map<string,unordered_map<int,int>> mp;						//Storing in map to get search result in O(1) time
+		vector<Trie*> roots;										//Storing each paragraph in different trie
 
 		void clear(){
 			paragraphs.clear();
@@ -34,6 +48,9 @@ class Document{
 							if(token[i]>='A' && token[i]<='Z'){
 								token[i]=(int)(token[i]-'A')+'a';  
 							}
+							if(token[i]<'a' || token[i]>'z'){		//Erasing any other character than lower case letters
+								token.erase(token.begin()+i);		//Otherwise trie implementation will give segmentation fault
+							}
 						}
 						currentPara.pb(token);
 					}
@@ -42,22 +59,44 @@ class Document{
 			}
 		}
 
-		//Storing words in Map
+		//Function to store each paragraph in a different trie
 		void store(){
-			mp.clear();
+			roots.clear();
 			for(int i=0;i<paragraphs.size()-1;i++){
-		    	for(int j=0;j<paragraphs[i].size();j++){
-		    		mp[paragraphs[i][j]][i]++;
-		    	}
-		    }
+				Trie *root=createNode();
+				for(int j=0;j<paragraphs[i].size();j++){
+					string t=paragraphs[i][j];
+					int n=t.size();
+					Trie *temp=root;
+					for(int i=0;i<n;i++){
+						int index=t[i]-'a';
+						if(!temp->children[index])temp->children[index]=createNode();
+						temp=temp->children[index];
+					}
+					temp->isEnd=temp->isEnd+1;
+				}
+				roots.pb(root);
+			}
 		}
 
-		//Searching for presence of words in all paragraphs 
+		//Function to search a string a all tries
 		vector<pair<int,int>> search(string s){
 			vector<pair<int,int>> ans;
-			for(auto x:mp[s]){
-				ans.pb(x);
-	    	}
+			for(int i=0;i<roots.size();i++){
+				Trie* root=roots[i];
+				int n=s.size();
+				Trie *temp=root;
+				for(int i=0;i<n;i++){
+					int index=s[i]-'a';
+					if(!temp->children[index]){
+						break;
+					}
+					temp=temp->children[index];
+				}
+				if((temp!=NULL) && (temp->isEnd > 0)){
+					ans.pb(mp(i,temp->isEnd));
+				}
+			}
 	    	return ans;
 		}
 };
