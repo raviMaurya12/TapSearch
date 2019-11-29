@@ -54,7 +54,6 @@ int main(){
     }
 
     myfile.open ("output.txt");
-    myfile<<paragraphs.size()<<endl;
     for(int i=0;i<searchInput.size();i++){
     	myfile<<"<b>Search result for "<<searchInput[i]<<" : </b>"<<endl;
     	for(auto x:mp[searchInput[i]]){
