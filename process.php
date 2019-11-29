@@ -5,11 +5,14 @@
 	<body bgcolor="cyan">
 		<?php 
 
-			file_put_contents('input.txt', implode(PHP_EOL, $_POST["content"]));
- 			//$myfile = file_put_contents('input.txt', $_POST["searchInput"].PHP_EOL , FILE_APPEND | LOCK_EX);
-			$last_line=system('./hash_implementation < input.txt',$retval);
-			$text=nl2br(file_get_contents('output.txt'));
-			echo $text;
+			$para=implode(PHP_EOL, $_POST["content"]);
+			$inp=implode(PHP_EOL, $_POST["searchInput"]);
+			$final=$para+$inp;
+			file_put_contents('input.txt', $final);
+ 			echo $final;
+			// $last_line=system('./hash_implementation < input.txt',$retval);
+			// $text=nl2br(file_get_contents('output.txt'));
+			// echo $text;
 
 		?>
 
