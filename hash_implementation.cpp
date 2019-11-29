@@ -13,7 +13,7 @@ vector<vector<string>> index(){
 	vector<vector<string>> para;
 	string tmp;
 	while(getline(cin,tmp)){
-		if(tmp.size()>0){									//Paragraph shouldn't be empty
+		if(tmp.size()>1){									//Paragraph shouldn't be empty
 			stringstream tokenizer(tmp);
 			string token;
 			vector<string> currentPara;
