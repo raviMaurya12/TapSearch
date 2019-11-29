@@ -55,7 +55,7 @@ int main(){
 
     myfile.open ("output.txt");
     for(int i=0;i<searchInput.size();i++){
-    	myfile<<"Search result for "<<searchInput[i]<<" : "<<endl;
+    	myfile<<"<b>Search result for "<<searchInput[i]<<" : </b>"<<endl;
     	for(auto x:mp[searchInput[i]]){
     		myfile<<x.second<<" times in paragraph "<<x.first+1<<endl;
     	}
